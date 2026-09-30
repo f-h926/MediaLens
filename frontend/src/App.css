@@ -1,0 +1,426 @@
+:root {
+  font-family: Georgia, "Times New Roman", serif;
+
+  color: #161616;
+  background: #fdfcf8;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+/* PAGE */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    ),
+    #eee9df;
+}
+
+.page {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 32px 0 80px;
+}
+
+/* MASTHEAD */
+
+.masthead {
+  text-align: center;
+
+  border-top: 5px solid #151515;
+  border-bottom: 2px solid #151515;
+
+  padding: 18px 0 22px;
+  margin-bottom: 36px;
+}
+
+.masthead h1 {
+  margin: 5px 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(3.5rem, 9vw, 7rem);
+
+  font-weight: 900;
+
+  letter-spacing: -0.06em;
+
+  text-transform: uppercase;
+
+  line-height: 0.9;
+}
+
+.edition {
+  margin: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+}
+
+.tagline {
+  margin: 12px 0 0;
+
+  font-size: 1rem;
+  font-style: italic;
+
+  letter-spacing: 0.05em;
+}
+
+/* SCANNER */
+
+.scanner {
+  margin-bottom: 50px;
+
+  text-align: center;
+}
+
+.kicker {
+  margin-bottom: 14px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.scan-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  max-width: 820px;
+
+  margin: 0 auto;
+
+  border: 2px solid #151515;
+
+  background: #f8f4ec;
+}
+
+.scan-form input {
+  width: 100%;
+
+  padding: 18px 20px;
+
+  border: 0;
+  outline: none;
+
+  background: transparent;
+
+  color: #151515;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.scan-form input::placeholder {
+  color: #777;
+}
+
+.scan-form button {
+  padding: 0 30px;
+
+  border: 0;
+  border-left: 2px solid #151515;
+
+  background: #151515;
+  color: #f8f4ec;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 0.8rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.scan-form button:hover {
+  background: #8b1e1e;
+}
+
+.scan-form button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+
+/* ERROR */
+
+.error {
+  max-width: 820px;
+
+  margin: 20px auto;
+
+  padding: 15px;
+
+  border-left: 5px solid #8b1e1e;
+
+  background: #f7e6e1;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* RESULT CONTAINER */
+
+.results {
+  border-top: 5px solid #151515;
+}
+
+/* RISK HERO */
+
+.risk-hero {
+  display: grid;
+
+  grid-template-columns:
+    minmax(250px, 1.2fr)
+    minmax(240px, 1fr);
+
+  gap: 50px;
+
+  padding: 38px;
+
+  background: #151515;
+  color: #f4efe5;
+
+  margin-bottom: 0;
+}
+
+.section-label {
+  margin: 0 0 12px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.risk-score {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 10px;
+}
+
+.risk-score span {
+  font-size: clamp(5rem, 13vw, 9rem);
+
+  font-weight: 900;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.08em;
+}
+
+.risk-score small {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 1.1rem;
+
+  opacity: 0.65;
+}
+
+.risk-level {
+  display: inline-block;
+
+  margin: 22px 0 0;
+
+  padding: 7px 12px;
+
+  background: #8b1e1e;
+  color: white;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 0.8rem;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+.risk-meta {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  border-left: 1px solid #5b5b5b;
+
+  padding-left: 35px;
+}
+
+.risk-meta p {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 17px 0;
+
+  margin: 0;
+
+  border-bottom: 1px solid #444;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.risk-meta strong {
+  text-transform: uppercase;
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.1em;
+}
+
+/* REPORT SECTIONS */
+
+.report-section {
+  padding: 38px 0;
+
+  border-bottom: 2px solid #151515;
+}
+
+.report-section h2 {
+  margin: 0 0 25px;
+
+  font-size: clamp(2rem, 5vw, 3.2rem);
+
+  font-weight: 900;
+
+  letter-spacing: -0.045em;
+}
+
+
+/* RISK BREAKDOWN */
+
+.report-section > p {
+  padding: 13px 0;
+
+  margin: 0;
+
+  border-top: 1px solid #aaa;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  line-height: 1.55;
+}
+
+/* SECURITY FINDINGS */
+
+.finding {
+  padding: 22px 0;
+
+  border-top: 1px solid #999;
+}
+
+.finding h3 {
+  margin: 0 0 10px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 0.85rem;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.finding p {
+  margin: 0;
+
+  max-width: 800px;
+
+  line-height: 1.7;
+}
+
+.finding-high h3 {
+  color: #8b1e1e;
+}
+
+.finding-medium h3 {
+  color: #9a5a16;
+}
+
+.finding-low h3 {
+  color: #555;
+}
+
+/* LINKS / DETAILS / DATA */
+
+strong {
+  font-weight: 700;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+  .page {
+    width: 90%;
+  }
+
+  .scan-form {
+    grid-template-columns: 1fr;
+  }
+
+  .scan-form button {
+    padding: 16px;
+
+    border-left: 0;
+    border-top: 2px solid #151515;
+  }
+
+  .risk-hero {
+    grid-template-columns: 1fr;
+
+    padding: 28px;
+  }
+
+  .risk-meta {
+    border-left: 0;
+
+    border-top: 1px solid #555;
+
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
+}
